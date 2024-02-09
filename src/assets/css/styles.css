@@ -1,0 +1,34 @@
+/*CSS GENERAL STYLES AND DECLARATIONS */
+
+/* ----------------------- FONTS  DECLARATION --------------------------------- */
+@font-face {
+    font-family: "queen1";                        /* Name of the font for code*/
+    src: url("fonts/Queen1.ttf");                 /* Location of the font */
+}
+@font-face {
+    font-family: "queen2";
+    src: url("fonts/Queen2.ttf");
+}
+@font-face {
+    font-family: "romantik";
+    src: url("fonts/Romantik.ttf");
+}
+@font-face {
+    font-family: "sofia";
+    src: url("fonts/Sofia.otf");
+}
+
+/* --------------------------------   GENERAL  ----------------------------------- */
+*{  /* Every component - Help to stardarize sizes */                                  
+    margin: 0px;                     
+    padding: 0px;
+}
+
+body{ /* All web body */
+    font-family: "queen1", Arial, Helvetica, sans-serif;   /* Declaring queen1 font */
+    font-size: 20px;                                       /* size of font */
+    background: url("./img/purple.jpg");                   /* image background */
+    position: fixed;                                       /* Dont move the background during scroll */
+}
+
+/* --------------------------------   GENERAL  ----------------------------------- */
