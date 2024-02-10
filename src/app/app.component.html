@@ -1,12 +1,17 @@
 
-<h1>Isaac's Portfolio</h1>
+<header>
+  <!-- Navegation bar through pages-->
+  <ul>
+    <li class = "link"> <a [routerLink] = "['/about-me']">About me</a></li>
+    <li class = "link"> <a [routerLink] = "['/projects']">Projects</a></li>
+    <li class = "logo"><a href="#">IQH</a></li>
+    <li class = "link"> <a [routerLink] = "['/create-project']">Create</a></li>
+    <li class = "link"> <a [routerLink] = "['/contact']">Contact</a></li>
+  </ul>
+</header>
 
- <!-- Navegation bar through pages-->
-<ul>
-  <li> <a [routerLink] = "['/about-me']">About me</a></li>
-  <li> <a [routerLink] = "['/projects']">Projects</a></li>
-  <li> <a [routerLink] = "['/create-project']">Create</a></li>
-  <li> <a [routerLink] = "['/contact']">Contact</a></li>
-</ul>
+<section id ="content">
+  <router-outlet></router-outlet>  <!-- Puts the component needed or in use, making it dynamic web page-->
+</section>
 
-<router-outlet></router-outlet>  <!-- Puts the component needed or in use, making it dynamic web page-->
+<footer> For more information contact me.   Isaac's Portfolio &copy;</footer>
