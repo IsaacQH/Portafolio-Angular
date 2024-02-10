@@ -27,8 +27,11 @@
 body{ /* All web body */
     font-family: "queen1", Arial, Helvetica, sans-serif;   /* Declaring queen1 font */
     font-size: 20px;                                       /* size of font */
-    background: url("./img/balg.jpg");                   /* image background */
-    background-attachment: contain ;                          /* Dont move the background during scroll */
+    background: url("./img/background.jpg");                   /* image background */
+    background-repeat: no-repeat;                      /* No repite nada */
+    background-position: center center;              /* Centers image */
+    background-attachment: fixed;                    /* Blocks the image */
+    background-size: cover;                          /* Fill image for website */
 }
 
 .clearfix{                                                  /* Clear spaces to divide labels */
@@ -44,6 +47,7 @@ header {
     background: rgba(44, 107, 223, 0.956); /* Background color with transparency */
     display: block;
     position: fixed; /* Fixed position for the header */
+    box-shadow: 0px 0px 10px black;
 }
 header ul {
     display: flex; /* Using flexbox to align the menu */
@@ -63,8 +67,8 @@ header ul li a {
     color: white; /* Text color */
     transition: all 300ms; /* Transition effect for all link elements */
 }
-.link:hover {
-    background-color: rgba(66, 198, 255, 0.956); /* Change background color */
+.link:hover, .actived {
+    background-color: rgba(50, 140, 219, 0.956); /* Change background color */
 }
 
 /* LOGO */
@@ -87,10 +91,20 @@ header ul li a {
 
 /* --------------------------------   CONTENT  ----------------------------------- */
 #content {
-    min-height: 40em;
-    width: 85%;
-    margin: 0px auto;
-    box-shadow: 0px 0px 40px black;
-    background: rgba(255, 255, 255, 0.745);
-    padding-top: 120px;
+    min-height: 40em; /* Minimum height for the content area */
+    width: 85%; /* Width of the content area */
+    margin: 0px auto; /* Center the content horizontally */
+    box-shadow: 0px 0px 20px black; /* Add a black shadow */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding-top: 120px; /* Top padding for content area */
+}
+
+/* --------------------------------   FOOTER  ----------------------------------- */
+footer {
+    width: 85%;   /* Width of the footer area */
+    margin: 0px auto; /* Center the footer horizontally */
+    padding-top: 5px; /* Top padding for footer */
+    font-weight: bold; /* Bold font weight for footer text */
+    color: rgba(0, 0, 0, 0.5); /* Semi-transparent black color for footer text */
+    text-align: center; /* Center-align the text in the footer */
 }
