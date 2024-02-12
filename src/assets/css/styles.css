@@ -17,6 +17,10 @@
     font-family: "sofia";
     src: url("fonts/Sofia.otf");
 }
+@font-face {
+    font-family: "pearl";
+    src: url("fonts/TAN-PEARL.ttf");
+}
 
 /* --------------------------------   GENERAL  ----------------------------------- */
 *{  /* Every component - Help to stardarize sizes */                                  
@@ -68,7 +72,7 @@ header ul li a {
     transition: all 300ms; /* Transition effect for all link elements */
 }
 .link:hover, .actived {
-    background-color: rgba(50, 140, 219, 0.956); /* Change background color */
+    background-color: rgba(80, 130, 223, 0.956); /* Change background color */
 }
 
 /* LOGO */
@@ -107,4 +111,58 @@ footer {
     font-weight: bold; /* Bold font weight for footer text */
     color: rgba(0, 0, 0, 0.5); /* Semi-transparent black color for footer text */
     text-align: center; /* Center-align the text in the footer */
+}
+
+/* --------------------------------   ABOUT ME   ----------------------------------- */
+#title {
+    width: 80%; /* Container width */
+    background-color: rgb(255, 255, 255); /* Background color */
+    text-align: center; /* Text alignment center */
+    margin: 0px auto; /* Margin top and bottom 0, left and right margin auto */
+    margin-bottom: 30px; /* Bottom margin */
+    color: rgb(151, 168, 189); /* Text color */
+    
+    & h1 {
+        font-family: "pearl"; /* Font family */
+        font-size: 50px; /* Font size */
+        font-weight: bold; /* Font weight */
+        border-bottom: 1px solid #ccc; /* Bottom border */
+        padding-bottom: 15px; /* Bottom padding */
+        color: rgb(74, 92, 112); /* Text color */
+    }
+    & h2 { 
+        padding-bottom: 5px;
+        font-size: 30px; /* Font size for h2 */
+    }
+    & p {font-size: 15px; /* Font size for paragraphs */}
+}
+
+#self {
+    width: 280px; /* Container width */
+    margin: 0px auto; /* Margin top and bottom 0, left and right margin auto */
+    margin-top: 35px; /* Top margin */
+    margin-bottom: 20px; /* Bottom margin */
+}
+
+.about {
+    width: 80%; /* Container width */
+    margin: 0px auto; /* Margin top and bottom 0, left and right margin auto */
+    color: rgb(94, 101, 109); /* Text color */
+    text-align: justify; /* Text alignment justified */
+    font-size: 23px; /* Font size */
+}
+
+
+.about h2 {
+    font-size: 32px; /* Font size */
+    font-weight: bold; /* Font weight */
+    border-bottom: 1px solid #ccc; /* Bottom border */
+    color: rgb(74, 92, 112); /* Text color */
+    padding-top: 10px; /* Top padding */
+    padding-bottom: 8px; /* Bottom padding */
+}
+
+.about p {
+    padding-top: 10px; /* Top padding */
+    padding-bottom: 50px; /* Bottom padding */
 }
