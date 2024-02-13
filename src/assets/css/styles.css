@@ -47,7 +47,7 @@ body{ /* All web body */
 
 header {
     width: 100%;
-    height: 8%;
+    height: 10%;
     background: rgba(44, 107, 223, 0.956); /* Background color with transparency */
     display: block;
     position: fixed; /* Fixed position for the header */
@@ -119,6 +119,7 @@ footer {
     background-color: rgb(255, 255, 255); /* Background color */
     text-align: center; /* Text alignment center */
     margin: 0px auto; /* Margin top and bottom 0, left and right margin auto */
+    margin-top: 50px; /* Bottom margin */
     margin-bottom: 30px; /* Bottom margin */
     color: rgb(151, 168, 189); /* Text color */
     
@@ -150,6 +151,7 @@ footer {
     color: rgb(94, 101, 109); /* Text color */
     text-align: justify; /* Text alignment justified */
     font-size: 23px; /* Font size */
+    padding-bottom: 40px;
 }
 
 
@@ -163,6 +165,18 @@ footer {
 }
 
 .about p {
-    padding-top: 10px; /* Top padding */
+    padding-top: 15px; /* Top padding */
     padding-bottom: 50px; /* Bottom padding */
+}
+
+.about ul {
+    padding-top: 15px;
+    padding-left: 30px;
+    display: flex; /* Use Flexbox */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.about ul li {
+    width: calc(20% - 6px); /* Set the width for each li (20% minus margins) */
+    margin: 0 30px 10px; /* Adjust margins for spacing */
 }

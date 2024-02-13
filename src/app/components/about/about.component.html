@@ -10,26 +10,21 @@
 
 <article class = "about">
     <h2>About me</h2>
-    <p>
-        A highly qualified 24-year-old Mechatronic Engineer with a diverse skill set encompassing programming, automation,
-        mechanics, and electronics. Committed to delivering projects with a strong emphasis on excellence. Passionate about
-        programming and dedicated to integrating design aesthetics, with a particular focus on front-end technologies. Eager to
-        contribute dynamic skills to a forward-thinking team. Ready to make meaningful contributions to innovative projects.
-    </p>
+    <p>{{article}}</p>
 
     <h2>Languages</h2>
     <p>
-        English & Spanish
+        {{langs}}
     </p>
 
-    <h2>Technical kills</h2>
-    <p>
-        JavaScript - HTML5 - CSS - Typescript - SQL - Unix/Linux - Git - Python - Java - POO - CI/CD - AWS - Azure - Matlab - OpenCV, ML - Agile
-    </p>
+    <h2>Technical skills</h2>
+    <ul>
+        <li *ngFor = "let skill of skills">{{skill}}</li>
+    </ul>
 
     <h2>Aptitudes</h2>
-    <p>
-        Creative - Integrity - Growth mindset - Collaboration - Felxibility
-    </p>
+    <ul>
+        <li *ngFor = "let app of aptitudes">{{app}}</li>
+    </ul>
 
 </article>
