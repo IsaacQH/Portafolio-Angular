@@ -1,24 +1,20 @@
 import { Injectable } from "@angular/core";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { Project } from "../models/project";
+import { Project} from "../models/project";
 import { global } from "./global";
 
 @Injectable()
-export class ProjectService {
-    public url: string; // URL for API endpoint
+export class ProjectService{
+    public url:string
 
     constructor(
-        private _http: HttpClient // Injecting HttpClient service
+        private _http: HttpClient
     ){
-        this.url = global.url; // Assigning global URL value to local variable
+        this.url = global.url
     }
 
-    /**
-     * Function to test the Angular service
-     * @returns A string confirming the testing of the service
-     */
-    testService(): string {
-        return "Testing the Angular service";
+    testService(){
+        return "Checking for Project Service"
     }
 }
