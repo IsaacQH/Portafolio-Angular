@@ -1,38 +1,62 @@
-<div class = "container">
-    <h2>{{title}}</h2>
+<!-- Section for creating projects -->
+<section id="create">
+    <!-- Container to hold the form -->
+    <div class="container">
+        <!-- Heading for the section -->
+        <h2>{{title}}</h2>
 
-    <form #projectForm = "ngForm" (ngSubmit)="onSubmit(projectForm)"> <!-- Name of form is projectForm, has a acction -> onSubmit function -->
-        <p>
-            <label for = "name">Name</label>
-            <input type="text" name="name" #name = "ngModel" [(ngModel)] = "project.name"/>
-        </p>
+        <div class = "message success" *ngIf = "status == 'SUCCESS'">Project has been created and published successfully. <a href = "http://localhost:3700/getAll">See it here</a></div>
+        <div class = "message failed" *ngIf =  "status == 'FAILED'">Project was not created. <a href = "http://localhost:3700/getAll">See it here</a></div>
 
-        <p>
-            <label for = "description">Description</label>
-            <textarea name="description" #description = "ngModel" [(ngModel)]= "project.description"></textarea>
-        </p>
-
-        <p>
-            <label for = "category">Category</label>
-            <input type="text" name="category" #category = "ngModel" [(ngModel)] = "project.category"/>
-        </p>
-
-        <p>
-            <label for = "langs">Programming languages</label>
-            <input type="text" name="langs" #langs = "ngModel" [(ngModel)] = "project.langs"/>
-        </p>
-
-        <p>
-            <label for = "year">Year</label>
-            <input type="text" name="year" #year = "ngModel" [(ngModel)] = "project.year"/>
-        </p>
-
-        <p>
-            <label for = "image">Insert image</label>
-            <input type="file" name="image" placeholder = "Upload Image"/>
-        </p>
-
-        <input type="submit" value="Send">
-
-    </form>
-</div>
+        <!-- Form for project creation -->
+        <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+            <!-- Input field for project name -->
+            <p>
+                <label for="name">Name</label>
+                <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required/><br/>
+                <span class ="formError" *ngIf="name.touched && !name.valid">The name field is required.</span>
+            </p>
+            
+            <!-- Textarea for project description -->
+            <p>
+                <label for="description">Description</label>
+                <textarea name="description" #description="ngModel" [(ngModel)]="project.description" required></textarea><br>
+                <span class ="formError" *ngIf="description.touched && !description.valid">The description field is required.</span>
+            </p>
+            
+            <!-- Input field for project category -->
+            <p>
+                <label for="category">Category</label>
+                <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category" required/><br>
+                <span class ="formError" *ngIf="category.touched && !category.valid">The category field is required.</span>
+            </p>
+            
+            <!-- Input field for programming languages used -->
+            <p>
+                <label for="langs">Programming languages</label>
+                <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required/><br>
+                <span class ="formError" *ngIf="langs.touched && !langs.valid">The name languages are required.</span>
+            </p>
+            
+            <!-- Input field for project year -->
+            <p>
+                <label for="year">Year</label>
+                <input type="text" name="year" #year="ngModel" [(ngModel)]="project.year"/>
+            </p>
+            
+            <!-- Custom file upload button -->
+            <p>
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="fas fa-cloud-upload-alt"></i> Upload Image
+                </label>
+                <input id="file-upload" type="file" name="image" />                
+            </p>
+            
+            <!-- Submit button for sending the form -->
+            <input type="submit" value="Send" [disabled] = "!projectForm.form.valid">
+        </form>
+    </div>
+    
+    <!-- Decorative image -->
+    <img id="decorator" src="../../../assets/css/img/create.png">
+</section>
