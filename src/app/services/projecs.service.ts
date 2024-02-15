@@ -24,4 +24,10 @@ export class ProjectService{
                                           //URL where the post is required, post on the backend
         return this._http.post(this.url + 'saveProject', params, {headers:headers})  //Creates a POST and puts the params on the url and organize the headers por http
       }
+
+    getProject():Observable<any>{
+        let headers = new HttpHeaders().set('Content-type', 'application/json')
+
+        return this._http.get(this.url + '/getAll', {headers:headers})
+    }
 }
