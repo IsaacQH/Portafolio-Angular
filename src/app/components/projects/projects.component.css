@@ -1,0 +1,45 @@
+/* --------------------------------   PROJECT  ----------------------------------- */
+#show{
+    padding: 50px;  /* Genereal padding of 50px to the container show*/
+}
+
+#show h2 {
+    font-size: 32px; /* Font size */
+    font-weight: bold; /* Font weight */
+    border-bottom: 1px solid #ccc; /* Bottom border */
+    color: rgb(74, 92, 112); /* Text color */
+    padding-top: 10px; /* Top padding */
+    padding-bottom: 8px; /* Bottom padding */
+}
+
+#show ul {
+    padding-top: 15px;
+    display: flex; /* Use Flexbox */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content:space-around;     /* Distribute items evenly */
+}
+
+.project{
+    list-style: none; /* Deletes teh styling*/
+    padding: 40px;  /* Adds an inner padding to the project box*/
+    color: rgb(94, 101, 109); /* Text color */
+    border-radius: 40px; /* Creates a border */
+    box-shadow: 0px 0px 30px rgb(211, 211, 211); /* Add a black shadow */
+    margin: 30px  /* a general margin */
+}
+
+.project .image{ /* Mask of the image*/
+    width: 220px;  /* give an expecific dimension */
+    height: 220px;
+    overflow: hidden; /*Shows the image only within the dimensions specified */
+    border-radius: 400px; /* Creates a circular radius*/
+}
+
+.project h3,
+.project p{
+    margin-top: 10px;  /* Generates a top margin por the text*/
+    text-align: center;  /* Centers the text*/
+}
+
+a {text-decoration: none;}
+

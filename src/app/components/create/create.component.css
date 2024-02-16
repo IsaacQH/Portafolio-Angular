@@ -1,0 +1,120 @@
+/* --------------------------------   CREATE  ----------------------------------- */
+#create{
+    display: flex; /* Utiliza flexbox para distribuir los elementos en línea */
+    justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+.container{
+    width: 45%; /* Ancho del contenedor */
+    justify-content: space-between;
+    padding: 50px;
+    padding-bottom: 40px;
+    margin: 0px auto; /* Margin top and bottom 0, left and right margin auto */
+    color: rgb(94, 101, 109); /* Text color */
+    font-size: 23px; /* Font size */
+}
+
+.container h2 {
+    font-size: 32px; /* Font size */
+    font-weight: bold; /* Font weight */
+    border-bottom: 1px solid #ccc; /* Bottom border */
+    color: rgb(74, 92, 112); /* Text color */
+    padding-top: 10px; /* Top padding */
+    padding-bottom: 8px; /* Bottom padding */
+}
+/* Form styling */
+form {
+    width: 75%; /* Width of the form */
+    padding-top: 15px; /* Top padding */
+}
+
+form label {
+    display: block; /* Display labels as block elements */
+    width: 80%; /* Width of the labels */
+    margin-top: 30px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea {
+    width: 100%; /* Width of text inputs and textarea */
+}
+
+/* Submit button and button styling */
+form input[type="submit"],
+form button {
+    margin-top: 30px; /* Top margin */
+    font-size: 18px; /* Font size */
+    padding: 10px 14px; /* Padding (top, right/left, bottom) */
+    background: rgba(44, 107, 223, 0.956); /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 10px; /* Radius of corners to make button round */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 300ms ease; /* Transition for scaling effect */
+    float: right; /* Align button to the right */
+}
+
+/* Hover effect for submit button and button */
+form input[type="submit"]:hover,
+form button:hover {
+    transform: scale(1.2); /* Scale the button on hover */
+    background: rgba(80, 130, 223, 0.956); /* Change background color on hover */
+}
+form input[disabled]{
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+
+/* Custom file upload button styling */
+.custom-file-upload {
+    width: 30%; /* Width of the custom file upload button */
+    margin-top: 30px; /* Top margin */
+    font-size: 14px; /* Font size */
+    padding: 10px 14px; /* Padding (top, right/left, bottom) */
+    background: rgba(44, 107, 223, 0.956); /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 20px; /* Radius of corners to make button round */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 100ms ease; /* Transition for scaling effect */
+    text-align: center; /* Center align text */
+}
+
+/* Hover effect for custom file upload button */
+.custom-file-upload:hover {
+    transform: scale(1.1); /* Scale the button on hover */
+}
+
+/* Hide default file input */
+form input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+/* Image section styling */
+#decorator {
+    display: block; /* Display as block element */
+    width: 40%; /* Width of the image */
+    padding: 50px; /* Padding around the image */
+}
+/* VALIDATION OF FORMS*/
+.formError{
+    color: red;
+    font-size: 15px;
+    text-align: right;
+    display: flex;
+    float: right;
+}
+ /*SUCCESS OR FAILED Message*/
+.message{
+    padding-top: 15px; /* Puts padding on top*/
+}
+
+.success{
+    color: rgb(12, 82, 12)  /*Color of font sucess */
+}
+.failed{
+    color: rgb(147, 12, 12) /* Color of font failed*/
+}
+

@@ -1,0 +1,68 @@
+/* --------------------------------   ABOUT ME   ----------------------------------- */
+#title {
+    width: 80%; /* Container width */
+    background-color: rgb(255, 255, 255); /* Background color */
+    text-align: center; /* Text alignment center */
+    margin: 0px auto; /* Margin top and bottom 0, left and right margin auto */
+    margin-top: 50px; /* Bottom margin */
+    margin-bottom: 30px; /* Bottom margin */
+    color: rgb(151, 168, 189); /* Text color */
+    
+    & h1 {
+        font-family: "pearl"; /* Font family */
+        font-size: 50px; /* Font size */
+        font-weight: bold; /* Font weight */
+        border-bottom: 1px solid #ccc; /* Bottom border */
+        padding-bottom: 15px; /* Bottom padding */
+        color: rgb(74, 92, 112); /* Text color */
+    }
+    & h2 { 
+        padding-bottom: 5px;
+        font-size: 30px; /* Font size for h2 */
+    }
+    & p {font-size: 15px; /* Font size for paragraphs */}
+}
+
+#self {
+    width: 280px; /* Container width */
+    margin: 0px auto; /* Margin top and bottom 0, left and right margin auto */
+    margin-top: 35px; /* Top margin */
+    margin-bottom: 20px; /* Bottom margin */
+}
+
+.about {
+    width: 80%; /* Container width */
+    margin: 0px auto; /* Margin top and bottom 0, left and right margin auto */
+    color: rgb(94, 101, 109); /* Text color */
+    text-align: justify; /* Text alignment justified */
+    font-size: 23px; /* Font size */
+    padding-bottom: 40px;
+}
+
+
+.about h2 {
+    font-size: 32px; /* Font size */
+    font-weight: bold; /* Font weight */
+    border-bottom: 1px solid #ccc; /* Bottom border */
+    color: rgb(74, 92, 112); /* Text color */
+    padding-top: 10px; /* Top padding */
+    padding-bottom: 8px; /* Bottom padding */
+}
+
+.about p {
+    padding-top: 15px; /* Top padding */
+    padding-bottom: 50px; /* Bottom padding */
+}
+
+.about ul {
+    padding-top: 15px;
+    padding-left: 30px;
+    display: flex; /* Use Flexbox */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.about ul li {
+    width: calc(20% - 6px); /* Set the width for each li (20% minus margins) */
+    margin: 0 30px 10px; /* Adjust margins for spacing */
+}
+
