@@ -3,9 +3,11 @@
 
     <ul>
         <li class = "project" *ngFor = "let pro of projects">    <!-- Iterates in every index of projects Object( project.component.ts)-->
-            <div class="image"> <img src = "{{url + 'getImage/' + pro.image}}" *ngIf="pro.image"/> </div>
-            <h3>{{pro.name}}</h3>
-            <p>{{pro.category}}</p>
+            <a [routerLink] = "['/content', pro._id]">
+                <div class="image"> <img src = "{{url + 'getImage/' + pro.image}}" *ngIf="pro.image"/> </div>
+                <h3>{{pro.name}}</h3>
+                <p>{{pro.category}}</p>
+            </a>
         </li>        
     </ul>
 </div>

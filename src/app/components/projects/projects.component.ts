@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';    //imports for ngFor
 import { Project } from '../../models/project';     //import the model to see it
 import { ProjectService } from '../../services/projecs.service';  //imports the service, in this case for the get
 import { global } from '../../services/global';    //imports the global url
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css',
   providers: [ProjectService]
@@ -36,7 +37,7 @@ export class ProjectsComponent implements OnInit {
         if(response.projects){           //If there is any project
           this.projects = response.projects         //It saves every db projects on the variable
         }
-        console.log(response)
+        //console.log(response)
       },
       error => {                          //Error actions
         console.log(error)
