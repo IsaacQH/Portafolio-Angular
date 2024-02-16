@@ -301,3 +301,45 @@ form input[type="file"] {
 .failed{
     color: rgb(147, 12, 12)
 }
+
+
+/* --------------------------------   PROJECT  ----------------------------------- */
+#show{
+    padding: 50px;
+}
+
+#show h2 {
+    font-size: 32px; /* Font size */
+    font-weight: bold; /* Font weight */
+    border-bottom: 1px solid #ccc; /* Bottom border */
+    color: rgb(74, 92, 112); /* Text color */
+    padding-top: 10px; /* Top padding */
+    padding-bottom: 8px; /* Bottom padding */
+}
+
+#show ul {
+    padding-top: 15px;
+    display: flex; /* Use Flexbox */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content:space-around;     /* Distribute items evenly */
+}
+
+.project{
+    list-style: none;
+    padding: 50px;
+    color: rgb(94, 101, 109); /* Text color */
+}
+
+.project .image{
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.project h3,
+.project p{
+    text-align: center;
+}
+
+

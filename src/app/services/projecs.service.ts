@@ -28,6 +28,6 @@ export class ProjectService{
     getProject():Observable<any>{
         let headers = new HttpHeaders().set('Content-type', 'application/json')
 
-        return this._http.get(this.url + '/getAll', {headers:headers})
+        return this._http.get(this.url + 'getAll', {headers:headers})
     }
 }
