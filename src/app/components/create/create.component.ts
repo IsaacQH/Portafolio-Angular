@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../../models/project'; // Imports the Project model
-import { ProjectService } from '../../services/projecs.service';
+import { ProjectService } from '../../services/projects.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { UploadService } from '../../services/upload.service';
 import { global } from '../../services/global';
 
 @Component({
   selector: 'app-create', // Component selector
   standalone: true, // Standalone flag
-  imports: [CommonModule, FormsModule], // Imports array (not necessary)
+  imports: [CommonModule, FormsModule, RouterModule], // Imports array (not necessary)
   templateUrl: './create.component.html', // Template URL for HTML
   styleUrl: './create.component.css', // Style URL for CSS
   providers: [ProjectService, UploadService]
@@ -19,6 +20,7 @@ import { global } from '../../services/global';
 export class CreateComponent implements OnInit{
   public title: string; // Title for the component
   public project: Project; // Project object
+  public saveProject:any
   public status:string;  //Status of the post
   public filesToUpload:Array<File>;  //Initializa a string that will save the image
 
@@ -50,7 +52,8 @@ export class CreateComponent implements OnInit{
           //UPLOAD IMAGE
           this._uploadService.makeFileRequest(global.url + "uploadImage/" + response.project._id, [], this.filesToUpload, 'image')
                             .then((result:any) => {
-                              console.log(result)
+                              //console.log(result)
+                              this.saveProject = result
                               this.status = "SUCCESS";       //declararion of status is true so the message of HTML appears
                               form.reset()              //Resets the form
                             })

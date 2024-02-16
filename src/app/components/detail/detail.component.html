@@ -1,1 +1,12 @@
-<p>detail works!</p>
+<div class = "detail">
+    <div class = "img"> <img src = "{{url + 'getImage/' + project.image}}" *ngIf="project.image"/> </div>  
+    <h2>{{project.name}}</h2>
+    <h3>{{project.category}}  -  {{project.year}}</h3>
+    <p>{{project.description}}</p>
+    <p id = "langs">Technologies: [ {{project.langs}} ]</p>
+    <div class = "button">
+        <a (click)="deleteProject(project._id)" class = "delete">Delete</a>
+        <a href = "#" class = "edit">Edit</a>
+    </div>
+   
+</div>

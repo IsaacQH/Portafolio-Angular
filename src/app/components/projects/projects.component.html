@@ -3,7 +3,7 @@
 
     <ul>
         <li class = "project" *ngFor = "let pro of projects">    <!-- Iterates in every index of projects Object( project.component.ts)-->
-            <a [routerLink] = "['/content', pro._id]">
+            <a [routerLink] = "['/content', pro._id]">       <!-- This puts the id of selected one-->
                 <div class="image"> <img src = "{{url + 'getImage/' + pro.image}}" *ngIf="pro.image"/> </div>
                 <h3>{{pro.name}}</h3>
                 <p>{{pro.category}}</p>

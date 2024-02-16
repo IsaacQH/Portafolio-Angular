@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';    //imports for ngFor
 import { Project } from '../../models/project';     //import the model to see it
-import { ProjectService } from '../../services/projecs.service';  //imports the service, in this case for the get
+import { ProjectService } from '../../services/projects.service';  //imports the service, in this case for the get
 import { global } from '../../services/global';    //imports the global url
 import { RouterModule } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-projects',
@@ -44,4 +45,5 @@ export class ProjectsComponent implements OnInit {
       }
     )
   }
+
 }

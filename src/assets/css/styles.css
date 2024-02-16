@@ -292,20 +292,20 @@ form input[type="file"] {
 }
  /*SUCCESS OR FAILED Message*/
 .message{
-    padding-top: 15px;
+    padding-top: 15px; /* Puts padding on top*/
 }
 
 .success{
-    color: rgb(12, 82, 12)
+    color: rgb(12, 82, 12)  /*Color of font sucess */
 }
 .failed{
-    color: rgb(147, 12, 12)
+    color: rgb(147, 12, 12) /* Color of font failed*/
 }
 
 
 /* --------------------------------   PROJECT  ----------------------------------- */
 #show{
-    padding: 50px;
+    padding: 50px;  /* Genereal padding of 50px to the container show*/
 }
 
 #show h2 {
@@ -325,27 +325,26 @@ form input[type="file"] {
 }
 
 .project{
-    list-style: none;
-    padding: 40px;
+    list-style: none; /* Deletes teh styling*/
+    padding: 40px;  /* Adds an inner padding to the project box*/
     color: rgb(94, 101, 109); /* Text color */
-    border-radius: 40px;
+    border-radius: 40px; /* Creates a border */
     box-shadow: 0px 0px 30px rgb(211, 211, 211); /* Add a black shadow */
-    margin: 30px
+    margin: 30px  /* a general margin */
 }
 
-.project .image{
-    width: 220px;
+.project .image{ /* Mask of the image*/
+    width: 220px;  /* give an expecific dimension */
     height: 220px;
-    overflow: hidden;
-    border-radius: 400px;
+    overflow: hidden; /*Shows the image only within the dimensions specified */
+    border-radius: 400px; /* Creates a circular radius*/
 }
 
 .project h3,
 .project p{
-    margin-top: 10px;
-    text-align: center;
+    margin-top: 10px;  /* Generates a top margin por the text*/
+    text-align: center;  /* Centers the text*/
 }
 
 a {text-decoration: none;}
-
 

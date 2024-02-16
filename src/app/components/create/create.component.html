@@ -5,8 +5,8 @@
         <!-- Heading for the section -->
         <h2>{{title}}</h2>
 
-        <div class = "message success" *ngIf = "status == 'SUCCESS'">Project has been created and published successfully. <a href = "http://localhost:3700/getAll">See it here</a></div>
-        <div class = "message failed" *ngIf =  "status == 'FAILED'">Project was not created. <a href = "http://localhost:3700/getAll">See it here</a></div>
+        <div class = "message success" *ngIf = "status == 'SUCCESS'">Project has been created and published successfully. <a [routerLink] = "['/content', saveProject._id]">See it here</a></div>
+        <div class = "message failed" *ngIf =  "status == 'FAILED'">Project was not created.</div>
 
         <!-- Form for project creation -->
         <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">

@@ -1,0 +1,94 @@
+/* --------------------------------   DETAIL  ----------------------------------- */
+
+.detail {
+    text-align: center; /* Centra el contenido horizontalmente */
+    padding-top:60px;
+}
+
+.detail .img {
+    width: 80%;
+    height: 300px; /* Altura específica para el div contenedor */
+    display: inline-block; /* Cambiado a inline-block para permitir que el contenido flote */
+    overflow: hidden; /* Se recorta cualquier contenido que exceda la altura especificada */
+    margin-bottom: 20px; /* Agregamos un poco de espacio debajo del div */
+    border-radius: 40px;
+}
+
+.detail img {
+    width: 100%; /* La imagen ocupa el ancho completo del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* La imagen se ajusta dentro del contenedor manteniendo su relación de aspecto */
+}
+
+.detail h2{ 
+    width: 70%;   /* Size of width to the 70%*/
+    margin:auto;  /* Centers the margin*/
+    font-family: "pearl"; /* Font family */
+    font-size: 30px; /* Font size */
+    font-weight: bold; /* Font weight */
+    border-top: 1px solid #ccc; /* Bottom border */
+    padding-top: 15px; /* Bottom padding */
+    border-bottom: 1px solid #ccc; /* Bottom border */
+    padding-bottom: 15px; /* Bottom padding */
+    color: rgb(74, 92, 112); /* Text color */
+    margin-bottom: 15px;
+}
+
+/* Styling for h3 elements within .detail */
+.detail h3 {
+    color: rgb(94, 101, 109); /* Text color */
+    text-align: left; /* Left-align text */
+    width: 70%; /* Set width to 70% */
+    margin: auto; /* Center horizontally */
+    font-style: italic; /* Italic font style */
+    font-weight: bold; /* Bold font weight */
+    font-family: "pearl"; /* Font family */
+    font-size: 17px; /* Font size */
+}
+
+/* Styling for p elements within .detail */
+.detail p {
+    color: rgb(94, 101, 109); /* Text color */
+    text-align: left; /* Left-align text */
+    width: 70%; /* Set width to 70% */
+    margin: auto; /* Center horizontally */
+    font-size: 24px; /* Font size */
+    text-align: justify; /* Justify text */
+    padding-top: 20px; /* Add padding on top */
+}
+
+/* Styling for #langs element within .detail */
+.detail #langs {
+    text-align: center; /* Center-align text */
+    padding-bottom: 30px; /* Add padding on bottom */
+}
+
+.button{
+    width: 70%; /* Set width to 70% */
+    margin: auto;
+    text-align: right; /* Left-align text */
+    padding-bottom: 100px;
+}
+
+
+.detail .button a{
+    font-size: 18px; /* Font size */
+    padding: 10px 14px; /* Padding (top, right/left, bottom) */
+    background: rgba(44, 107, 223, 0.956); /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 10px; /* Radius of corners to make button round */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 300ms ease; /* Transition for scaling effect */
+    float: right; /* Align button to the right */
+}
+
+.edit {
+    margin-right: 20px;
+}
+
+/* Hover effect for submit button and button */
+.detail .button a:hover {
+    transform: scale(1.2); /* Scale the button on hover */
+    background: rgba(80, 130, 223, 0.956); /* Change background color on hover */
+}
