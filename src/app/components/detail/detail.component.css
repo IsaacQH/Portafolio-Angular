@@ -81,6 +81,7 @@
     cursor: pointer; /* Pointer cursor on hover */
     transition: transform 300ms ease; /* Transition for scaling effect */
     float: right; /* Align button to the right */
+    text-decoration: none;
 }
 
 .edit {

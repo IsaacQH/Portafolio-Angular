@@ -1,0 +1,65 @@
+<!-- Section for creating projects -->
+<section id="create">
+    <!-- Container to hold the form -->
+    <div class="container">
+        <!-- Heading for the section -->
+        <h2>{{title}}</h2>
+
+        <div class = "message success" *ngIf = "status == 'SUCCESS'">Project has been created and published successfully. <a [routerLink] = "['/content', saveProject._id]">See it here</a></div>
+        <div class = "message failed" *ngIf =  "status == 'FAILED'">Project was not created.</div>
+
+        <!-- Form for project creation -->
+        <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+            <!-- Input field for project name -->
+            <p>
+                <label for="name">Name</label>
+                <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required/><br/>
+                <span class ="formError" *ngIf="name.touched && !name.valid">The name field is required.</span>
+            </p>
+            
+            <!-- Textarea for project description -->
+            <p>
+                <label for="description">Description</label>
+                <textarea name="description" #description="ngModel" [(ngModel)]="project.description" required></textarea><br>
+                <span class ="formError" *ngIf="description.touched && !description.valid">The description field is required.</span>
+            </p>
+            
+            <!-- Input field for project category -->
+            <p>
+                <label for="category">Category</label>
+                <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category" required/><br>
+                <span class ="formError" *ngIf="category.touched && !category.valid">The category field is required.</span>
+            </p>
+            
+            <!-- Input field for programming languages used -->
+            <p>
+                <label for="langs">Programming languages</label>
+                <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required/><br>
+                <span class ="formError" *ngIf="langs.touched && !langs.valid">The name languages are required.</span>
+            </p>
+            
+            <!-- Input field for project year -->
+            <p>
+                <label for="year">Year</label>
+                <input type="text" name="year" #year="ngModel" [(ngModel)]="project.year"/>
+            </p>
+            
+            <!-- Custom file upload button -->
+            <div>
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="fas fa-cloud-upload-alt"></i> Change Image
+                </label>
+                <input id="file-upload" type="file" name="image" (change) = "fileChangeEvent($event)"/>
+                <div>
+                    <img class = "img" src = "{{url + 'getImage/' + project.image}}" *ngIf="project.image"/> 
+               </div>                   
+            </div>
+            
+            <!-- Submit button for sending the form -->
+            <input type="submit" value="Send" [disabled] = "!projectForm.form.valid">
+        </form>
+    </div>
+    
+    <!-- Decorative image -->
+    <img id="decorator" src="../../../assets/css/img/edit.png">
+</section>

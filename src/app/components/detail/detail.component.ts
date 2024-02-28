@@ -4,11 +4,12 @@ import { global } from '../../services/global';  //import the url
 import { Project } from '../../models/project';  //importing model
 import { Router, ActivatedRoute, Params } from '@angular/router'  //importing routers
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './detail.component.html',
   styleUrl: './detail.component.css',
   providers: [ProjectService]     //adding provider

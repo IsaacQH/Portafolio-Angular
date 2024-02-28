@@ -6,7 +6,7 @@
     <p id = "langs">Technologies: [ {{project.langs}} ]</p>
     <div class = "button">
         <a (click)="deleteProject(project._id)" class = "delete">Delete</a>
-        <a href = "#" class = "edit">Edit</a>
+        <a [routerLink] = "['/edit', project._id]" class = "edit">Edit</a> <!-- On click comes to the edit component-->
     </div>
    
 </div>
