@@ -48,17 +48,23 @@ export class CreateComponent implements OnInit{
 
           //console.log("This is the result of POST")
           //console.log(response)      //Prints the object project as a full JSON whith id assigned
-          
-          //UPLOAD IMAGE
-          this._uploadService.makeFileRequest(global.url + "uploadImage/" + response.project._id, [], this.filesToUpload, 'image')
-                            .then((result:any) => {
-                              //console.log(result)
-                              this.saveProject = result
-                              this.status = "SUCCESS";       //declararion of status is true so the message of HTML appears
-                              form.reset()              //Resets the form
-                            })
-          
-          
+          if(this.filesToUpload){
+             //UPLOAD IMAGE
+            this._uploadService.makeFileRequest(global.url + "uploadImage/" + response.project._id, [], this.filesToUpload, 'image')
+            .then((result:any) => {
+              //console.log(result)
+              this.saveProject = result.project
+              this.status = "SUCCESS";       //declararion of status is true so the message of HTML appears
+              form.reset()              //Resets the form
+            })
+
+
+          }else{
+            this.saveProject = response.project
+            this.status = "SUCCESS";       //declararion of status is true so the message of HTML appears
+            form.reset()
+          }
+         
         }else{
           this.status = "FAILED";       //declararion of status is false, so the message dont appear
         }

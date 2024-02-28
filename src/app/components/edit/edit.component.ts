@@ -3,7 +3,7 @@ import { global } from '../../services/global';
 import { Project } from '../../models/project';
 import { ProjectService } from '../../services/projects.service';
 import { UploadService } from '../../services/upload.service';
-import { Router, ActivatedRoute, Params } from '@angular/router'  //importing routers
+import { ActivatedRoute } from '@angular/router'  //importing routers
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';

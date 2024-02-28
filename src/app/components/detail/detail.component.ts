@@ -18,6 +18,7 @@ export class DetailComponent implements OnInit{
 
   public url:string              //Initiates the url variable
   public project: Project        //Initialices the project model
+  public confirm:boolean
 
 
   constructor(
@@ -27,6 +28,7 @@ export class DetailComponent implements OnInit{
   ){
     this.url = global.url                //Declares the url as the global url
     this.project = new Project("","","","","", 0,""); // Initializes a new Project object with default values
+    this.confirm = false
   }
 
   ngOnInit() {
@@ -58,6 +60,10 @@ export class DetailComponent implements OnInit{
         console.log(<any>error)               //Shows the error
       }
     )
+  }
+
+  setConfirm(confirm:boolean){
+    this.confirm = confirm
   }
 
 

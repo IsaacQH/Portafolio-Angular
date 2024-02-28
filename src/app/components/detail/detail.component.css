@@ -84,6 +84,16 @@
     text-decoration: none;
 }
 
+.detail .button .confirm{
+    background: rgba(158, 18, 18, 0.956); /* Background color */
+    margin-left: 20px;
+}
+.detail .button .confirm:hover{
+    transform: scale(1.2); /* Scale the button on hover */
+    background: rgba(250, 36, 36, 0.956); /* Change background color on hover */
+    margin-left: 20px;
+}
+
 .edit {
     margin-right: 20px;
 }
@@ -92,4 +102,11 @@
 .detail .button a:hover {
     transform: scale(1.2); /* Scale the button on hover */
     background: rgba(80, 130, 223, 0.956); /* Change background color on hover */
+}
+
+.detail .span{
+    color: red;
+    text-align: end;
+    padding-bottom: 20px;
+
 }

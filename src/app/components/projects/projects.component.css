@@ -25,7 +25,12 @@
     color: rgb(94, 101, 109); /* Text color */
     border-radius: 40px; /* Creates a border */
     box-shadow: 0px 0px 30px rgb(211, 211, 211); /* Add a black shadow */
-    margin: 30px  /* a general margin */
+    margin: 30px;  /* a general margin */
+    transition: transform 300ms ease;
+}
+
+.project:hover{
+    transform: scale(1.1);
 }
 
 .project .image{ /* Mask of the image*/
