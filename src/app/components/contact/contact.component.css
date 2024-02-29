@@ -1,0 +1,74 @@
+
+h2 {
+    font-size: 32px; /* Font size */
+    font-weight: bold; /* Font weight */
+    border-bottom: 1px solid #ccc; /* Bottom border */
+    color: rgb(74, 92, 112); /* Text color */
+    padding-bottom: 8px; /* Bottom padding */
+    margin-bottom: 20px;
+}
+
+p{
+    margin: 4px
+}
+
+.contact h2{
+    color: white;
+}
+
+.contact{
+    background: rgba(44, 107, 223, 0.956); /* Background color */
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Para alinear verticalmente */
+    text-align: center; /* Para centrar texto horizontalmente */
+    margin: 0 auto; /* Para centrar los elementos en la página */
+    width: 50%; /* Ajusta el ancho según tu preferencia */
+    padding: 40px; /* Añade un espacio alrededor del contenido */
+    margin-top: 50px;
+    margin-bottom: 100px;
+    color: white
+}
+
+.comments{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Para alinear verticalmente */
+    text-align: center; /* Para centrar texto horizontalmente */
+    margin: 0 auto; /* Para centrar los elementos en la página */
+    width: 50%; /* Ajusta el ancho según tu preferencia */
+    padding: 20px; /* Añade un espacio alrededor del contenido */
+    padding-bottom: 80px;
+}
+
+.comments  input[type="submit"]{
+    margin-top: 30px; /* Top margin */
+    font-size: 18px; /* Font size */
+    padding: 10px 14px; /* Padding (top, right/left, bottom) */
+    background: rgba(44, 107, 223, 0.956); /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 10px; /* Radius of corners to make button round */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 300ms ease; /* Transition for scaling effect */
+    float: right; /* Align button to the right */
+}
+
+/* Hover effect for submit button and button */
+.comments  input[type="submit"]:hover {
+    transform: scale(1.2); /* Scale the button on hover */
+    background: rgba(80, 130, 223, 0.956); /* Change background color on hover */
+}
+.comments input[disabled]{
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+
+.comments textarea{
+    width: 90%;
+    height: 150px;
+}
+

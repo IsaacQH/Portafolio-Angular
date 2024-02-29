@@ -1,1 +1,14 @@
-<p>contact works!</p>
+ 
+ <div class = "contact">
+    <h2> {{subtitle}}</h2>
+    <p>Number: {{num}}</p>
+    <p>Mail: {{mail}}</p>
+    <p>LinkedIn: {{linked}}</p>
+    <p>GitHub: {{git}}</p>
+ </div>
+
+ <form  class = "comments"  #commentForm = "ngForm" (ngSubmit)="onSubmit(commentForm)" >
+   <h2> {{title}}</h2>
+   <textarea name="text" #text="ngModel" [(ngModel)]="comment.text" required ></textarea>
+   <input type="submit" value="Send" [disabled] = "!commentForm.form.valid">
+</form>
