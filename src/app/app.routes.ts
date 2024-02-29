@@ -8,10 +8,12 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ErrorComponent } from './components/error/error.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { EditComponent } from './components/edit/edit.component';
+import { HomeComponent } from './components/home/home.component';
 
 //Assigning Routes:These are the routes that the url is going to use and the assingned component
 export const routes: Routes = [
     {path: '', component: AboutComponent},
+    {path: 'home', component: HomeComponent},
     {path: 'about-me', component: AboutComponent},
     {path: 'projects', component: ProjectsComponent},
     {path: 'create-project', component: CreateComponent},
